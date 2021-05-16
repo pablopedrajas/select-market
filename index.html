@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Plakton Natural Cork Sandals | Choose your Market | Official Website</title>
+        <meta name="description" content="Choose your market. Comfortable Cork Sandals Hand Made in Spain since 1995. Discover the Exclusive Online Collection of the Most Comfortable Brand in the Market. Plakton Sandals are Made with Natural Cork Technology that will Make Your Feet Feel Extremely Comfy.">
+        <link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/2113/5143/files/4.png?v=1555316903">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <meta name="p:domain_verify" content="95ff01599bdb9c42831c4ba68bde2a76"/>
+    </head>
+    <body>
+        <div class="d-md-flex h-md-100 align-items-center">
+
+            <!-- First Half -->
+            
+            <div id="first-half" class="col-md-6 p-0 bg-indigo h-md-100">
+                <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+                    <div class="logoarea pt-5 pb-5">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Half -->
+            
+            <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
+                <div class="d-flex flex-column align-items-center h-md-100 p-5 justify-content-center">
+                    <img id="logo" src="https://cdn.shopify.com/s/files/1/2113/5143/files/Copia_de_Copia_de_Copia_de_Sin_titulo.svg?v=1621159256" alt="">
+                    <h1>SELECT MARKET</h1>
+                    <p>Please select your Shipping Destination:</p>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="https://eu.plaktonsandals.com/">EUROPE</a>
+                            </li>
+                            <li>
+                                <a href="https://us.plaktonsandals.com/">UNITED STATES</a>
+                            </li>
+                            <li>
+                                <a href="https://latam.plaktonsandals.com/">LATAM</a>
+                            </li>
+                            <li>
+                                <a href="https://eu.plaktonsandals.com/">UNITED KINGDOM</a>
+                            </li>
+                            <li>
+                                <a href="https://eu.plaktonsandals.com/">REST OF WORLD</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+          var d = new Date();
+          d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+          var expires = "expires=" + d.toUTCString();
+          // console.log(cname + "=" + cvalue + ";" + expires + "; path=/"); 
+          document.cookie = cname + "=" + cvalue + ";" + expires + "; path=/;";
+        }
+    
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+    
+        function checkCookie() {
+          var loc = getCookie("plaktonLoc");
+          if (loc != "") {
+            return loc;
+          }
+        }
+    
+        function redirect(selectedCountry) {
+            if (selectedCountry === "US") {
+                window.location.href = "https://us.plaktonsandals.com/"; 
+            } else if (selectedCountry==="EU") {
+                window.location.href = "https://eu.plaktonsandals.com/"; 
+            } else {
+                window.location.href = "https://latam.plaktonsandals.com/"; 
+            }
+        }
+      
+      document.getElementById("buttonCountry").addEventListener("click", function() {
+          var selectedCountry = document.getElementById("dropCountry").value;
+          // console.log(selectedCountry);
+          setCookie("plaktonLoc", selectedCountry, 2);
+          redirect(selectedCountry);
+      });
+    
+      function init() {
+         var cookie = checkCookie();
+         // console.log("Retrieved cookie: " + cookie);
+         if (cookie) {
+            redirect(cookie);
+         }
+      }
+    
+      init();
+    </script>
+</html>

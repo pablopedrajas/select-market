@@ -1,0 +1,57 @@
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (min-width: 768px) {
+    .h-md-100 { height: 100vh; }
+}
+
+/* Mobile */
+@media only screen and (max-width: 800px) {
+    #first-half {
+        display: none !important;
+    }
+}
+
+#first-half {
+    background-image: url("https://cdn.shopify.com/s/files/1/2113/5143/files/PLAKTON_SUMMER2_19-copia.jpg?v=1613791798");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: left !important;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    color: #b2b2b2;
+    text-transform: uppercase;
+    font-size: 40px;
+    display: block;
+    padding: 20px;
+}
+
+a {
+    color: #b2b2b2 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: black !important;
+}
+
+#logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.btn-round { border-radius: 30px; }
+.bg-indigo { background: indigo; }
+.text-cyan { color: #35bdff; }
